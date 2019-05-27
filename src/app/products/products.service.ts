@@ -3,6 +3,8 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
 
+import * as faker from 'faker/locale/en_IND';
+
 import { IProduct } from './product';
 
 @Injectable({
@@ -12,6 +14,10 @@ export class ProductService {
   private productUrl = 'api/products/products.json';
 
   constructor(private http: HttpClient) { }
+
+  // getFakerProducts(): Observable<IFakerProduct> {
+  //   return this.http.get<IFakerProduct>(this.)
+  // }
 
   getProducts(): Observable<IProduct[]> {
     return this.http.get<IProduct[]>(this.productUrl).pipe(
