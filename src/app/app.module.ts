@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ProductsModule } from './products/products.module';
-import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
 import { CartComponent } from './cart/cart.component';
@@ -17,8 +16,7 @@ import { CartComponent } from './cart/cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ProductsModule,
-    SharedModule
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
